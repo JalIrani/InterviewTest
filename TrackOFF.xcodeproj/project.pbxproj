@@ -7,23 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33930FC820659A8200DEB62D /* WebBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33930FC720659A8200DEB62D /* WebBrowserViewController.swift */; };
 		33DE5532206598FB00910402 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DE5531206598FB00910402 /* AppDelegate.swift */; };
-		33DE5534206598FB00910402 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DE5533206598FB00910402 /* ViewController.swift */; };
 		33DE5537206598FB00910402 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33DE5535206598FB00910402 /* Main.storyboard */; };
 		33DE553A206598FB00910402 /* TrackOFF.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 33DE5538206598FB00910402 /* TrackOFF.xcdatamodeld */; };
 		33DE553C206598FB00910402 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33DE553B206598FB00910402 /* Assets.xcassets */; };
 		33DE553F206598FB00910402 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33DE553D206598FB00910402 /* LaunchScreen.storyboard */; };
+		33ED46282065B78300B58B3A /* JavaScriptParserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ED46272065B78300B58B3A /* JavaScriptParserViewController.swift */; };
+		4D06DF8E42A9F112636493A9 /* Pods_TrackOFF.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0461642D44F71C11B16AE81E /* Pods_TrackOFF.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0461642D44F71C11B16AE81E /* Pods_TrackOFF.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrackOFF.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		22A074B3E2D10B08EBB1C626 /* Pods-TrackOFF.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrackOFF.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrackOFF/Pods-TrackOFF.release.xcconfig"; sourceTree = "<group>"; };
+		33930FC720659A8200DEB62D /* WebBrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebBrowserViewController.swift; sourceTree = "<group>"; };
 		33DE552E206598FB00910402 /* TrackOFF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrackOFF.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33DE5531206598FB00910402 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		33DE5533206598FB00910402 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		33DE5536206598FB00910402 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		33DE5539206598FB00910402 /* TrackOFF.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TrackOFF.xcdatamodel; sourceTree = "<group>"; };
 		33DE553B206598FB00910402 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		33DE553E206598FB00910402 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		33DE5540206598FB00910402 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33ED46272065B78300B58B3A /* JavaScriptParserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JavaScriptParserViewController.swift; sourceTree = "<group>"; };
+		4ADB7A9E6A48AEC7158DCC38 /* Pods-TrackOFF.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrackOFF.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrackOFF/Pods-TrackOFF.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D06DF8E42A9F112636493A9 /* Pods_TrackOFF.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +49,8 @@
 			children = (
 				33DE5530206598FB00910402 /* TrackOFF */,
 				33DE552F206598FB00910402 /* Products */,
+				CD300D4DFFA8F337CC4F33B3 /* Pods */,
+				DFFBC687FA172C2C286420D4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,14 +66,32 @@
 			isa = PBXGroup;
 			children = (
 				33DE5531206598FB00910402 /* AppDelegate.swift */,
-				33DE5533206598FB00910402 /* ViewController.swift */,
 				33DE5535206598FB00910402 /* Main.storyboard */,
 				33DE553B206598FB00910402 /* Assets.xcassets */,
 				33DE553D206598FB00910402 /* LaunchScreen.storyboard */,
 				33DE5540206598FB00910402 /* Info.plist */,
 				33DE5538206598FB00910402 /* TrackOFF.xcdatamodeld */,
+				33930FC720659A8200DEB62D /* WebBrowserViewController.swift */,
+				33ED46272065B78300B58B3A /* JavaScriptParserViewController.swift */,
 			);
 			path = TrackOFF;
+			sourceTree = "<group>";
+		};
+		CD300D4DFFA8F337CC4F33B3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4ADB7A9E6A48AEC7158DCC38 /* Pods-TrackOFF.debug.xcconfig */,
+				22A074B3E2D10B08EBB1C626 /* Pods-TrackOFF.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DFFBC687FA172C2C286420D4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0461642D44F71C11B16AE81E /* Pods_TrackOFF.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +101,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 33DE5543206598FB00910402 /* Build configuration list for PBXNativeTarget "TrackOFF" */;
 			buildPhases = (
+				306816A6AA2C70A2BAFA31B8 /* [CP] Check Pods Manifest.lock */,
 				33DE552A206598FB00910402 /* Sources */,
 				33DE552B206598FB00910402 /* Frameworks */,
 				33DE552C206598FB00910402 /* Resources */,
+				B3072BB7F7D61D3ABDFC1CCD /* [CP] Embed Pods Frameworks */,
+				1B39813243F22B2AC12E7B06 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -134,14 +164,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1B39813243F22B2AC12E7B06 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TrackOFF/Pods-TrackOFF-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		306816A6AA2C70A2BAFA31B8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B3072BB7F7D61D3ABDFC1CCD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TrackOFF/Pods-TrackOFF-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		33DE552A206598FB00910402 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33DE5534206598FB00910402 /* ViewController.swift in Sources */,
 				33DE553A206598FB00910402 /* TrackOFF.xcdatamodeld in Sources */,
 				33DE5532206598FB00910402 /* AppDelegate.swift in Sources */,
+				33ED46282065B78300B58B3A /* JavaScriptParserViewController.swift in Sources */,
+				33930FC820659A8200DEB62D /* WebBrowserViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +355,7 @@
 		};
 		33DE5544206598FB00910402 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4ADB7A9E6A48AEC7158DCC38 /* Pods-TrackOFF.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -291,6 +371,7 @@
 		};
 		33DE5545206598FB00910402 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22A074B3E2D10B08EBB1C626 /* Pods-TrackOFF.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
