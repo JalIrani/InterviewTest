@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftSoup
 
 class JavaScriptParserViewController: UIViewController {
 
+    var webUrl:String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        getJS()
+        getJS(url: webUrl!)
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,11 +24,11 @@ class JavaScriptParserViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func getJS() {
+    func getJS(url: String) {
         var embeddedCount = 0
         var externalCount = 0
         var externalFilePaths:[String] = []
-        let url = "http://www.trackoff.com"
+        print(url)
         Alamofire.request(url).responseString { response in
             guard let html = response.result.value else { return }
             guard let els: Elements = try? SwiftSoup.parse(html).select("script") else { return }

@@ -11,24 +11,49 @@ import Alamofire
 import SwiftSoup
 import WebKit
 
-class WebBrowserViewController: UIViewController {
+class WebBrowserViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var webView: WKWebView!
+    @IBOutlet weak var urlTextfield: UITextField!
+    
+    // Default URL - Google homepage
+    var url = URL(string: "https://www.google.com")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let url = URL(string: "http://www.trackoff.com")
-        let request = URLRequest(url: url!)
-        webView.load(request)
-        getJS()
+        self.urlTextfield.delegate = self
+        urlTextfield.returnKeyType = .go
+        urlTextfield.autocorrectionType = .no
+        loadRequest()
+        //getJS()
     }
     
-    override var prefersStatusBarHidden: Bool {
-        return true
-    }
+    // To remove status bar if needed
+    //override var prefersStatusBarHidden: Bool {
+        //return true
+    //}
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if (textField.returnKeyType == UIReturnKeyType.go) {
+            if verifyUrl(urlString: textField.text!) {
+                url = URL(string: textField.text!)
+                loadRequest()
+            } else {
+                // create popup
+            }
+            urlTextfield.resignFirstResponder()
+        }
+        return true
+    }
+    
+    func loadRequest() {
+        let request = URLRequest(url: url!)
+        webView.load(request)
     }
     
     func getJS() {
@@ -58,15 +83,25 @@ class WebBrowserViewController: UIViewController {
             }
         }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    func verifyUrl (urlString: String?) -> Bool {
+        if let urlString = urlString {
+            if let url = URL(string: urlString) {
+                return UIApplication.shared.canOpenURL(url)
+            }
+        }
+        return false
     }
-    */
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is JavaScriptParserViewController {
+            let jsVC = segue.destination as? JavaScriptParserViewController
+            if url?.absoluteString == "" {
+                // Create alert if no URL
+            } else {
+                jsVC?.webUrl = url?.absoluteString
+            }
+        }
+    }
 
 }

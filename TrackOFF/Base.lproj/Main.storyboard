@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Web Browser View Controller-->
+        <!--TrackOFF Interview-->
         <scene sceneID="cWb-ze-GUN">
             <objects>
                 <viewController id="Rah-Z4-gFD" customClass="WebBrowserViewController" customModule="TrackOFF" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Zl-CI-HxB">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="110" width="375" height="557"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
@@ -27,18 +27,27 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter url" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tRl-gQ-gHX">
+                                <rect key="frame" x="0.0" y="72" width="375" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="YTg-t1-bBb"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Ih0-cf-paU">
-                        <barButtonItem key="rightBarButtonItem" title="Go" id="chW-eP-ApY">
+                    <navigationItem key="navigationItem" title="TrackOFF Interview" id="Ih0-cf-paU">
+                        <barButtonItem key="backBarButtonItem" title=" " id="tDG-MS-F1i"/>
+                        <barButtonItem key="rightBarButtonItem" image="jsSymbol" id="chW-eP-ApY">
                             <connections>
                                 <segue destination="z2o-Mw-znA" kind="show" id="XF1-LW-tP2"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="urlTextfield" destination="tRl-gQ-gHX" id="zS6-No-6dr"/>
                         <outlet property="webView" destination="4Zl-CI-HxB" id="ecd-Oo-wdg"/>
                     </connections>
                 </viewController>
@@ -53,13 +62,22 @@
                     <view key="view" contentMode="scaleToFill" id="Q8t-lm-SgS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xDo-n6-BnV">
+                                <rect key="frame" x="54" y="169" width="267" height="142"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="ya1-RS-22G"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IBB-ed-MMa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1362" y="79"/>
+            <point key="canvasLocation" x="1360.8" y="78.710644677661179"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Wwd-n6-a69">
@@ -80,4 +98,7 @@
             <point key="canvasLocation" x="-76" y="79"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="jsSymbol" width="25" height="25"/>
+    </resources>
 </document>
