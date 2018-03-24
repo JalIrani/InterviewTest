@@ -101,4 +101,5 @@
     <resources>
         <image name="jsSymbol" width="25" height="25"/>
     </resources>
+    <color key="tintColor" red="1" green="0.0" blue="0.0093617555430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

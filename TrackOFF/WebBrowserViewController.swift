@@ -44,44 +44,11 @@ class WebBrowserViewController: UIViewController, UITextFieldDelegate {
                 url = URL(string: textField.text!)
                 loadRequest()
             } else {
-                // create popup
+                createAlert(urlName: textField.text!)
             }
             urlTextfield.resignFirstResponder()
         }
         return true
-    }
-    
-    func loadRequest() {
-        let request = URLRequest(url: url!)
-        webView.load(request)
-    }
-    
-    func getJS() {
-        var embeddedCount = 0
-        var externalCount = 0
-        var externalFilePaths:[String] = []
-        let url = "http://www.trackoff.com"
-        Alamofire.request(url).responseString { response in
-            guard let html = response.result.value else { return }
-            guard let els: Elements = try? SwiftSoup.parse(html).select("script") else { return }
-            for element: Element in els.array() {
-                guard let scriptPath = try? element.attr("src") else { return }
-                
-                if scriptPath == "" {
-                    embeddedCount += 1
-                } else {
-                    externalCount += 1
-                    externalFilePaths.append(scriptPath)
-                }
-            }
-            print("There are \(embeddedCount) embedded JavaScript 'files' and \(externalCount) external JavaScript Files in the webpage \(url)")
-            if externalFilePaths.count > 0 {
-                print("--- File Paths ---")
-                for filePath in externalFilePaths {
-                    print(filePath)
-                }
-            }
-        }
     }
     
     func verifyUrl (urlString: String?) -> Bool {
@@ -92,16 +59,22 @@ class WebBrowserViewController: UIViewController, UITextFieldDelegate {
         }
         return false
     }
+    
+    func loadRequest() {
+        let request = URLRequest(url: url!)
+        webView.load(request)
+    }
+    
+    func createAlert(urlName: String) {
+        let alert = UIAlertController(title: "Invalid URL", message: "\(urlName) is an invalid url", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is JavaScriptParserViewController {
             let jsVC = segue.destination as? JavaScriptParserViewController
-            if url?.absoluteString == "" {
-                // Create alert if no URL
-            } else {
-                jsVC?.webUrl = url?.absoluteString
-            }
+            jsVC?.webUrl = url?.absoluteString
         }
     }
-
 }
