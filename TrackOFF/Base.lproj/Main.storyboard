@@ -18,24 +18,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Zl-CI-HxB">
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Zl-CI-HxB">
                                 <rect key="frame" x="0.0" y="110" width="375" height="557"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter url" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tRl-gQ-gHX">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter url" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tRl-gQ-gHX">
                                 <rect key="frame" x="0.0" y="72" width="375" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tRl-gQ-gHX" firstAttribute="leading" secondItem="4Zl-CI-HxB" secondAttribute="leading" id="06M-mY-LM6"/>
+                            <constraint firstItem="tRl-gQ-gHX" firstAttribute="top" secondItem="YTg-t1-bBb" secondAttribute="top" constant="8" id="HRD-qM-J2Y"/>
+                            <constraint firstItem="tRl-gQ-gHX" firstAttribute="leading" secondItem="vxv-PP-dKA" secondAttribute="leading" id="JBu-fO-e6L"/>
+                            <constraint firstItem="4Zl-CI-HxB" firstAttribute="bottom" secondItem="YTg-t1-bBb" secondAttribute="bottom" id="JXo-Il-Rgk"/>
+                            <constraint firstAttribute="trailing" secondItem="tRl-gQ-gHX" secondAttribute="trailing" id="fsV-fJ-ubI"/>
+                            <constraint firstItem="4Zl-CI-HxB" firstAttribute="top" secondItem="tRl-gQ-gHX" secondAttribute="bottom" constant="8" symbolic="YES" id="iWs-9D-ux1"/>
+                            <constraint firstItem="tRl-gQ-gHX" firstAttribute="trailing" secondItem="4Zl-CI-HxB" secondAttribute="trailing" id="xNM-3R-A2Q"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="YTg-t1-bBb"/>
                     </view>
                     <navigationItem key="navigationItem" title="TrackOFF Interview" id="Ih0-cf-paU">
@@ -55,10 +62,10 @@
             </objects>
             <point key="canvasLocation" x="660" y="78.710644677661179"/>
         </scene>
-        <!--Java Script Parser View Controller-->
+        <!--JavaScript Analysis-->
         <scene sceneID="wEL-iS-eQ9">
             <objects>
-                <viewController id="z2o-Mw-znA" customClass="JavaScriptParserViewController" customModule="TrackOFF" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="JavaScript Analysis" id="z2o-Mw-znA" customClass="JavaScriptParserViewController" customModule="TrackOFF" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Q8t-lm-SgS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
