@@ -11,7 +11,9 @@ import Alamofire
 import SwiftSoup
 
 class JavaScriptParserViewController: UIViewController {
-
+    
+    @IBOutlet weak var jsDisplayLabel: UILabel!
+    
     var webUrl:String?
     
     override func viewDidLoad() {
@@ -42,7 +44,7 @@ class JavaScriptParserViewController: UIViewController {
                     externalFilePaths.append(scriptPath)
                 }
             }
-            print("There are \(embeddedCount) embedded JavaScript 'files' and \(externalCount) external JavaScript Files in the webpage \(url)")
+            self.jsDisplayLabel.text = "There are: \(embeddedCount) embedded JavaScript 'file(s)' and \(externalCount) external JavaScript file(s) in the url: \n \(url)"
             if externalFilePaths.count > 0 {
                 print("--- File Paths ---")
                 for filePath in externalFilePaths {

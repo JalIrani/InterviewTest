@@ -70,17 +70,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xDo-n6-BnV">
-                                <rect key="frame" x="54" y="169" width="267" height="142"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scanning JS Files..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xDo-n6-BnV">
+                                <rect key="frame" x="54" y="194" width="267" height="279"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xDo-n6-BnV" firstAttribute="top" secondItem="ya1-RS-22G" secondAttribute="top" constant="130" id="96f-ux-rZK"/>
+                            <constraint firstItem="xDo-n6-BnV" firstAttribute="centerX" secondItem="Q8t-lm-SgS" secondAttribute="centerX" id="E3U-G6-lyQ"/>
+                            <constraint firstItem="xDo-n6-BnV" firstAttribute="leading" secondItem="ya1-RS-22G" secondAttribute="leading" constant="54" id="JIT-DJ-KqD"/>
+                            <constraint firstItem="xDo-n6-BnV" firstAttribute="centerY" secondItem="Q8t-lm-SgS" secondAttribute="centerY" id="oUe-QY-Mks"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ya1-RS-22G"/>
                     </view>
+                    <connections>
+                        <outlet property="jsDisplayLabel" destination="xDo-n6-BnV" id="jlp-VE-hmG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IBB-ed-MMa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
