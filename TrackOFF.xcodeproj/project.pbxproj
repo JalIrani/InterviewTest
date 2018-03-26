@@ -44,6 +44,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		336AEEA72068845200896D4B /* JavaScriptParser */ = {
+			isa = PBXGroup;
+			children = (
+				336AEEA82068846200896D4B /* View */,
+			);
+			path = JavaScriptParser;
+			sourceTree = "<group>";
+		};
+		336AEEA82068846200896D4B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				33ED46272065B78300B58B3A /* JavaScriptParserViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		336AEEA92068847000896D4B /* WebBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				336AEEAA2068847900896D4B /* View */,
+			);
+			path = WebBrowser;
+			sourceTree = "<group>";
+		};
+		336AEEAA2068847900896D4B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				33930FC720659A8200DEB62D /* WebBrowserViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		33DE5525206598FB00910402 = {
 			isa = PBXGroup;
 			children = (
@@ -65,14 +97,14 @@
 		33DE5530206598FB00910402 /* TrackOFF */ = {
 			isa = PBXGroup;
 			children = (
+				336AEEA92068847000896D4B /* WebBrowser */,
+				336AEEA72068845200896D4B /* JavaScriptParser */,
 				33DE5531206598FB00910402 /* AppDelegate.swift */,
 				33DE5535206598FB00910402 /* Main.storyboard */,
 				33DE553B206598FB00910402 /* Assets.xcassets */,
 				33DE553D206598FB00910402 /* LaunchScreen.storyboard */,
 				33DE5540206598FB00910402 /* Info.plist */,
 				33DE5538206598FB00910402 /* TrackOFF.xcdatamodeld */,
-				33930FC720659A8200DEB62D /* WebBrowserViewController.swift */,
-				33ED46272065B78300B58B3A /* JavaScriptParserViewController.swift */,
 			);
 			path = TrackOFF;
 			sourceTree = "<group>";

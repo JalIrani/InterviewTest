@@ -62,10 +62,10 @@
             </objects>
             <point key="canvasLocation" x="660" y="78.325123152709367"/>
         </scene>
-        <!--JavaScript Analysis-->
+        <!--JavaScript Parser-->
         <scene sceneID="wEL-iS-eQ9">
             <objects>
-                <viewController title="JavaScript Analysis" id="z2o-Mw-znA" customClass="JavaScriptParserViewController" customModule="TrackOFF" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="JavaScript Parser" id="z2o-Mw-znA" customClass="JavaScriptParserViewController" customModule="TrackOFF" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Q8t-lm-SgS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
